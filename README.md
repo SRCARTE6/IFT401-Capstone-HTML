@@ -15,7 +15,6 @@ The full project was a stock-trading simulation system built using Django for th
 My contribution focused on front-end design and layout structure.
 
 ## Screenshots
-### Sign-In Page
 ![Sign-Up Page](Screenshots/sign_up.png)
 ![Sign-In Page](Screenshots/sign_in.png)
 ![Shareholder Portfolio](Screenshots/shareholder_portfolio.png)
