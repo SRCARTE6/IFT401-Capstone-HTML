@@ -1,0 +1,66 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/portfolio.css' %}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ADMIN • Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="{% static 'css/portfolio.css' %}" />
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <img src="{% static 'images/logo.png' %}" class="logo" alt="Investr.io Logo" />
+      <nav>
+        <a href="{% url 'admin_dashboard' %}" class="active">Dashboard</a>
+        <a href="{% url 'admin_create_stock' %}">Create Stock</a>
+        <a href="{% url 'admin_market_schedule' %}">Market Schedule</a>
+        <a href="{% url 'logout' %}">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="admin-card">
+      <h2>Admin Dashboard</h2>
+      <table class="stock-table">
+        <thead>
+          <tr>
+            <th>Stock Name</th>
+            <th>Ticker</th>
+            <th>Price ($)</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for stock in stocks %}
+          <tr>
+            <td>{{ stock.name }}</td>
+            <td>{{ stock.symbol }}</td>
+            <td>{{ stock.price }}</td>
+            <td>
+              {% if stock.active %}
+                <span style="color:green;">Active</span>
+              {% else %}
+                <span style="color:red;">Inactive</span>
+              {% endif %}
+            </td>
+            <td>
+              <a href="{% url 'admin_edit_stock' stock.id %}">Edit</a> |
+              <a href="{% url 'admin_delete_stock' stock.id %}" onclick="return confirm('Are you sure?')">Delete</a>
+            </td>
+          </tr>
+          {% empty %}
+          <tr>
+            <td colspan="5" style="text-align:center;">No stocks created yet.</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <a href="{% url 'admin_create_stock' %}" class="btn">+ Create New Stock</a>
+    </div>
+  </main>
+</body>
+</html>
