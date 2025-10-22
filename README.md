@@ -26,8 +26,10 @@ My contribution focused on front-end design and layout structure.
 ![Shareholder Portfolio](Screenshots/admin_change_market_hours.png)
 ![Shareholder Portfolio](Screenshots/admin_create_stock.png)
 
-
-
 ## Author
 Summer Olson SRCARTE6 
 Arizona State University
+
+## Full Project Repository
+The complete InvestR.io capstone project (including backend and database) is available here:  
+[View the full IFT 401 Capstone Project on GitHub](https://github.com/jraguil5/IFT401-FinalProject)
