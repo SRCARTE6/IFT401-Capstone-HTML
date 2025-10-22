@@ -14,6 +14,20 @@ These files represent my individual front-end work (sign-in, dashboard, and rela
 The full project was a stock-trading simulation system built using Django for the backend.  
 My contribution focused on front-end design and layout structure.
 
+## Screenshots
+### Sign-In Page
+![Sign-Up Page](Screenshots/sign_up.png)
+![Sign-In Page](Screenshots/sign_in.png)
+![Shareholder Portfolio](Screenshots/shareholder_portfolio.png)
+![Shareholder Portfolio](Screenshots/buy_stock.png)
+![Shareholder Portfolio](Screenshots/sell_stock.png)
+![Shareholder Portfolio](Screenshots/deposit_cash.png)
+![Shareholder Portfolio](Screenshots/withdraw_cash.png)
+![Shareholder Portfolio](Screenshots/admin_change_market_hours.png)
+![Shareholder Portfolio](Screenshots/admin_create_stock.png)
+
+
+
 ## Author
 Summer Olson SRCARTE6 
 Arizona State University
